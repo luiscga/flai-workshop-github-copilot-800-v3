@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['_id', 'username', 'email', 'password', 'team', 'created_at']
+        fields = ['_id', 'username', 'email', 'password', 'first_name', 'last_name', 'team', 'created_at']
         extra_kwargs = {
             'password': {'write_only': True}
         }
@@ -22,6 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TeamSerializer(serializers.ModelSerializer):
     _id = serializers.SerializerMethodField()
+    members = serializers.SerializerMethodField()
     
     class Meta:
         model = Team
@@ -29,6 +30,19 @@ class TeamSerializer(serializers.ModelSerializer):
     
     def get__id(self, obj):
         return str(obj._id) if obj._id else None
+    
+    def get_members(self, obj):
+        # Ensure members is returned as a list
+        if isinstance(obj.members, list):
+            return obj.members
+        elif isinstance(obj.members, str):
+            # Try to parse if it's a string representation
+            import json
+            try:
+                return json.loads(obj.members.replace("'", '"'))
+            except:
+                return []
+        return []
 
 
 class ActivitySerializer(serializers.ModelSerializer):

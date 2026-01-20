@@ -41,6 +41,8 @@ class Command(BaseCommand):
             username='Iron Man',
             email='tony.stark@marvel.com',
             password='arc_reactor_3000',
+            first_name='Tony',
+            last_name='Stark',
             team='Team Marvel'
         )
         
@@ -48,6 +50,8 @@ class Command(BaseCommand):
             username='Captain America',
             email='steve.rogers@marvel.com',
             password='shield_bearer',
+            first_name='Steve',
+            last_name='Rogers',
             team='Team Marvel'
         )
         
@@ -55,6 +59,8 @@ class Command(BaseCommand):
             username='Black Widow',
             email='natasha.romanoff@marvel.com',
             password='red_room_elite',
+            first_name='Natasha',
+            last_name='Romanoff',
             team='Team Marvel'
         )
         
@@ -62,6 +68,8 @@ class Command(BaseCommand):
             username='Thor',
             email='thor.odinson@marvel.com',
             password='asgard_prince',
+            first_name='Thor',
+            last_name='Odinson',
             team='Team Marvel'
         )
         
@@ -69,6 +77,8 @@ class Command(BaseCommand):
             username='Hulk',
             email='bruce.banner@marvel.com',
             password='gamma_smash',
+            first_name='Bruce',
+            last_name='Banner',
             team='Team Marvel'
         )
         
@@ -77,6 +87,8 @@ class Command(BaseCommand):
             username='Superman',
             email='clark.kent@dc.com',
             password='krypton_last_son',
+            first_name='Clark',
+            last_name='Kent',
             team='Team DC'
         )
         
@@ -84,6 +96,8 @@ class Command(BaseCommand):
             username='Batman',
             email='bruce.wayne@dc.com',
             password='dark_knight',
+            first_name='Bruce',
+            last_name='Wayne',
             team='Team DC'
         )
         
@@ -91,6 +105,8 @@ class Command(BaseCommand):
             username='Wonder Woman',
             email='diana.prince@dc.com',
             password='amazon_warrior',
+            first_name='Diana',
+            last_name='Prince',
             team='Team DC'
         )
         
@@ -98,6 +114,8 @@ class Command(BaseCommand):
             username='Flash',
             email='barry.allen@dc.com',
             password='speed_force',
+            first_name='Barry',
+            last_name='Allen',
             team='Team DC'
         )
         
@@ -105,6 +123,8 @@ class Command(BaseCommand):
             username='Aquaman',
             email='arthur.curry@dc.com',
             password='atlantis_king',
+            first_name='Arthur',
+            last_name='Curry',
             team='Team DC'
         )
         
